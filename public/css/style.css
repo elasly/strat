@@ -1,0 +1,65 @@
+/* Dark Theme Styles for Strategy_Engine */
+
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #e0e0e0;
+}
+
+.navbar, .footer {
+  background-color: #242424;
+}
+
+.form-control, .btn-primary, select {
+  background-color: #333;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+.form-control:focus, .btn-primary:focus, .btn-primary:hover, select:focus {
+  background-color: #555;
+  color: #fff;
+}
+
+.form-control::placeholder {
+  color: #aaa;
+}
+
+/* Custom button styling */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Adjusting link colors for better visibility */
+a, a:hover, a:focus {
+  color: #1E90FF;
+}
+
+/* Placeholder styles */
+::placeholder {
+  color: #aaa;
+}
+
+/* Adjusting the background color for dropdown menus */
+.dropdown-menu {
+  background-color: #333;
+  border-color: #555;
+}
+
+.dropdown-item {
+  color: #e0e0e0;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: #555;
+  color: #fff;
+}

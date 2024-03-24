@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/_head.ejs') %>
+<body>
+<%- include('partials/_header.ejs') %>
+<main role="main" class="container mt-4">
+    <h1>Dashboard</h1>
+    <div id="strategyList"></div>
+    <h2>Backtest Results Visualization</h2>
+    <canvas id="equityCurveChart" width="400" height="400"></canvas>
+    <canvas id="drawdownChart" width="400" height="400"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/visualization.js"></script>
+    <script src="/js/dashboard.js"></script>
+</main>
+<%- include('partials/_footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/_head.ejs') %>
+<style>
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  .form-control, .btn-primary, .btn-secondary {
+    background-color: #333;
+    border: 1px solid #555;
+    color: #fff;
+  }
+  .form-control:focus, .btn-primary:focus, .btn-primary:hover, .btn-secondary:focus, .btn-secondary:hover {
+    background-color: #555;
+    color: #fff;
+  }
+  .form-control::placeholder {
+    color: #aaa;
+  }
+  .strategy-section {
+    margin-bottom: 20px;
+  }
+</style>
+<body>
+<%- include('partials/_header.ejs') %>
+<main role="main" class="container mt-4">
+  <div class="text-center">
+    <h1>Strategy Engine</h1>
+    <div class="mt-5">
+      <h2>Submit Your Strategy</h2>
+      <form id="strategyForm">
+        <div class="mb-3 strategy-section">
+          <label for="strategyName" class="form-label">Strategy Name</label>
+          <input type="text" id="strategyName" name="strategyName" placeholder="Strategy Name" required class="form-control">
+        </div>
+        <div class="mb-3 strategy-section">
+          <label for="assetSymbol" class="form-label">Asset Symbol</label>
+          <input type="text" id="assetSymbol" name="assetSymbol" placeholder="Asset Symbol" required class="form-control">
+        </div>
+        <div class="mb-3 strategy-section">
+          <label for="timeFrame" class="form-label">Time Frame</label>
+          <select id="timeFrame" name="timeFrame" required class="form-control">
+            <option value="">Select Time Frame</option>
+            <option value="1min">1 Minute</option>
+            <option value="5min">5 Minutes</option>
+            <option value="15min">15 Minutes</option>
+            <option value="1h">1 Hour</option>
+            <option value="4h">4 Hours</option>
+            <option value="12h">12 Hours</option>
+            <option value="1d">1 Day</option>
+            <option value="1w">1 Week</option>
+            <option value="1M">1 Month</option>
+
+          </select>
+        </div>
+        <div id="indicatorsSection" class="mb-3 strategy-section">
+          <label class="form-label">Indicators</label>
+          <button type="button" id="addIndicator" class="btn btn-secondary">Add Indicator</button>
+          <div id="indicatorParametersSection"></div>
+        </div>
+        <div id="entryConditionsSection" class="mb-3 strategy-section">
+          <label class="form-label">Entry Conditions</label>
+          <button type="button" id="addEntryCondition" class="btn btn-secondary">Add Entry Condition</button>
+        </div>
+        <div id="exitConditionsSection" class="mb-3 strategy-section">
+          <label class="form-label">Exit Conditions</label>
+          <button type="button" id="addExitCondition" class="btn btn-secondary">Add Exit Condition</button>
+        </div>
+        <div class="mb-3 strategy-section">
+          <label for="strategyRules" class="form-label">Additional Strategy Rules</label>
+          <textarea id="strategyRules" name="strategyRules" placeholder="Additional Strategy Rules" rows="5" required class="form-control"></textarea>
+        </div>
+        <div class="mb-3">
+          <button type="button" id="submitStrategy" class="btn btn-primary">Submit Strategy</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+<%- include('partials/_footer.ejs') %>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/js/strategyForm.js"></script>
+</body>
+</html>
