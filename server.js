@@ -9,14 +9,12 @@ const subscriptionRoutes = require('./routes/subscriptionRoutes');
 const dashboardRoutes = require('./routes/dashboardRoutes');
 const apiRoutes = require('./routes/apiRoutes');
 const backtestRoutes = require('./routes/backtestRoutes');
-const userRoutes = require('./routes/userRoutes');
 const winston = require('winston');
 const rateLimit = require('express-rate-limit');
-const flash = require('express-flash');
 
 // Configure winston to log to console and a file
 const logger = winston.createLogger({
-  level: 'debug',
+  level: 'info',
   format: winston.format.combine(
     winston.format.timestamp(),
     winston.format.prettyPrint()
@@ -33,13 +31,13 @@ if (!process.env.DATABASE_URL || !process.env.SESSION_SECRET) {
 }
 
 const app = express();
-const port = process.env.PORT || 3000; 
+const port = process.env.PORT || 3000;
 
 // Middleware to parse request bodies
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Setting the templating engine to EJS  
+// Setting the templating engine to EJS
 app.set("view engine", "ejs");
 
 // Serve static files
@@ -65,8 +63,6 @@ app.use(
     store: MongoStore.create({ mongoUrl: process.env.DATABASE_URL }),
   }),
 );
-
-app.use(flash()); // Initialize express-flash
 
 // Logging session creation and destruction
 app.use((req, res, next) => {
@@ -112,9 +108,6 @@ app.use(apiRoutes);
 
 // Backtest Route
 app.use(backtestRoutes);
-
-// User Profile Route
-app.use(userRoutes);
 
 // Root path response
 app.get("/", (req, res) => {
