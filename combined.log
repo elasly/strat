@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {"level":"info","message":"Password reset request for non-existent email:"}
 {"level":"info","message":"Password reset request for non-existent email:"}
 {"accepted":["elasly@gmail.com"],"ehlo":["SIZE 35882577","8BITMIME","AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH","ENHANCEDSTATUSCODES","PIPELINING","CHUNKING","SMTPUTF8"],"envelope":{"from":"Amr.Mostafa@gsolutionme.com","to":["elasly@gmail.com"]},"envelopeTime":576,"level":"info","message":"Password reset email sent:","messageId":"<4c20bcc5-5641-3270-8fa2-5058f36ae7a2@gsolutionme.com>","messageSize":719,"messageTime":680,"rejected":[],"response":"250 2.0.0 OK  1710355593 bq12-20020a5d5a0c000000b0033ea499c645sm4020488wrb.4 - gsmtp"}
@@ -77,7 +76,6 @@
 {"level":"info","message":"Login success for user: amr"}
 {"level":"info","message":"Login success for user: amr"}
 {"level":"info","message":"Login success for user: amr"}
-=======
 {"level":"info","message":"Password reset request for non-existent email:"}
 {"level":"info","message":"Password reset request for non-existent email:"}
 {"accepted":["elasly@gmail.com"],"ehlo":["SIZE 35882577","8BITMIME","AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH","ENHANCEDSTATUSCODES","PIPELINING","CHUNKING","SMTPUTF8"],"envelope":{"from":"Amr.Mostafa@gsolutionme.com","to":["elasly@gmail.com"]},"envelopeTime":576,"level":"info","message":"Password reset email sent:","messageId":"<4c20bcc5-5641-3270-8fa2-5058f36ae7a2@gsolutionme.com>","messageSize":719,"messageTime":680,"rejected":[],"response":"250 2.0.0 OK  1710355593 bq12-20020a5d5a0c000000b0033ea499c645sm4020488wrb.4 - gsmtp"}
@@ -156,4 +154,3 @@
 {"level":"info","message":"Login success for user: amr"}
 {"level":"info","message":"Login success for user: amr"}
 {"level":"info","message":"Login success for user: amr"}
->>>>>>> 80e0605d579794312dbef151f46eada6e1f397f0
